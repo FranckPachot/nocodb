@@ -13,7 +13,7 @@ services:
       - "nc_data:/usr/app/data"
   root_db: 
     image: yugabytedb/yugabyte:2024.1.1.0-b137
-    command: bash -c 'rm -rf /tmp/.yb.* ; yugabyted start --enable_pg_parity_tech_preview --background=false --tserver-flags'
+    command: bash -c 'rm -rf /tmp/.yb.* ; yugabyted start --enable_pg_parity_tech_preview --background=false'
     environment: 
       YSQL_DB: root_db
       YSQL_PASSWORD: password
